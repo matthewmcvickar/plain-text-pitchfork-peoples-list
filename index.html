@@ -1,32 +1,22 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Plain-text Pitchfork People's List</title>
-
+  <title>Plain-text Pitchfork People&rsquo;s List</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style.css">
-
-  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  
   <div class="container">
-
     <header>
-      <h1>Plain-text Pitchfork People's List</h1>
+      <h1>Plain-text Pitchfork People&rsquo;s List</h1>
       <h2>Work out your People&rsquo;s List in plain text before dragging-and-dropping.</h2>
     </header>
-
-    <p>By <a href="http://clonesofthequeen.bandcamp.com/album/braided">Matthew McVickar</a>.</p>
+    <p>By <a href="http://matthewmcvickar.com">Matthew McVickar</a>.</p>
     <ol>
       <li><a href="http://peopleslist.pitchfork.com/list/build/">Build your People&rsquo;s List</a> with reckless excitement and nostalgia.</li>
-      <li>When you&rsquo;ve got a good list, select the entire webpage (<kbd>&#8984;+A</kbd> on Mac, <kbd>Ctrl+A</kbd> on Windows) and copy. The fully selected webpage should look <a target="_blank" href="http://i.imgur.com/Wu2Iz.png">like this</a>.</li>
+      <li>When you&rsquo;ve got a good list, select the entire webpage (<kbd>&#8984;+A</kbd> on Mac, <kbd>Ctrl+A</kbd> on Windows) and copy. The fully selected webpage should look <a target="_blank" href="img/select-all.png">like this</a>.</li>
       <li>Paste it in the textbox below and click the <strong>GO</strong> button.</li>
       <li>Your album list will be automatically generated. Reorder it with the ease of copy and paste commands (preferably in a text editor&mdash;I&rsquo;m not auto-saving anything here).</li>
       <li>When you're done, use it as a reference to <a href="http://peopleslist.pitchfork.com/list/build/">order your People&rsquo;s List</a>.</li>
@@ -34,25 +24,29 @@
     <textarea id="list" placeholder="Paste your entire &lsquo;Build Your People&rsquo;s List&rsquo; webpage here."></textarea>
     <input id="go" type="button" value="GO">
     <p>If it doesn&rsquo;t work, <a href="https://twitter.com/matthewmcvickar">let me know</a>!</p>
-
   </div>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.0.min.js"><\/script>')</script>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
   <script>
-  $(document).ready(function(){
+  $(function() {
     $('#go').click(function() {
-      $('#list').val($('#list').val().replace(/\n?CHOOSE ALBUMS FOR YOUR LIST  EDIT YOUR LIST  VIEW YOUR LIST  WELCOME, [A-Za-z ]*. LOG OUT\?\nEDIT YOUR LIST\nDrag to order the albums you've picked.\nWhen you're done, click "Save Changes".\nDISMISS\nMY TOP ALBUMS\nDrag the albums below to order your list./g, '').replace(/\nTell us what you think about your top pick:\n\n250 characters remaining\n/g, '').replace(/\nFinished sorting your list\?\n\nSAVE CHANGES\nUnsaved changes will be\nauto-saved every 30 seconds.\n\nView your list and\nshare it with the world.\n\nVIEW YOUR LIST/g, '').replace(/\n?Remove/g, '').replace(/\d+\n(.*)\n(.*)/g, '$2 - $1').trim());
+      $('#list').val(
+          $('#list').val()
+            .replace(/\n?CHOOSE ALBUMS FOR YOUR LIST  EDIT YOUR LIST  VIEW YOUR LIST  WELCOME, [A-Za-z ]*. LOG OUT\?\nEDIT YOUR LIST\nDrag to order the albums you've picked.\nWhen you're done, click "Save Changes".\nDISMISS\nMY TOP ALBUMS\nDrag the albums below to order your list./g, '')
+            .replace(/\nTell us what you think about your top pick:\n\n250 characters remaining\n/g, '')
+            .replace(/\nFinished sorting your list\?\n\nSAVE CHANGES\nUnsaved changes will be\nauto-saved every 30 seconds.\n\nView your list and\nshare it with the world.\n\nVIEW YOUR LIST/g, '')
+            .replace(/\n?Remove/g, '')
+            .replace(/\d+\n(.*)\n(.*)/g, '$2 - $1')
+            .trim()
+        );
     });
   });
   </script>
-
   <script>
-    var _gaq=[['_setAccount','UA-2466767-4'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+  var _gaq=[['_setAccount','UA-2466767-4'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
 </body>
 </html>
