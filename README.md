@@ -1,4 +1,4 @@
-# Plain-text Pitchfork People's List
+# Plain-text Pitchfork People’s List
 
 [matthewmcvickar.github.io/plain-text-pitchfork-peoples-list](http://matthewmcvickar.github.io/plain-text-pitchfork-peoples-list/)
 
