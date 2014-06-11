@@ -55,18 +55,32 @@ table {
   color: white; }
 
 body {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
   margin: 0 auto;
   width: 600px; }
 
+a {
+  color: deepskyblue; }
+
+p {
+  padding-bottom: 1em; }
+
 h1 {
-  margin-bottom: 0.25em; }
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0.5em 0; }
 
 h2 {
-  font-size: 16px; }
+  font-size: 18px;
+  margin: 0.5em 0 1.25em 0; }
 
 ol {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  margin-left: 1.5em; }
   ol li {
+    line-height: 1.4;
+    list-style: decimal;
     margin-bottom: 0.5em; }
 
 kbd {
@@ -77,12 +91,22 @@ kbd {
   padding: 0.25em; }
 
 #list {
+  font-family: "Helvetica Neue";
   padding: 10px;
   width: 455px;
-  height: 500px; }
+  height: 350px; }
 
 #go {
+  background: deepskyblue;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  font-family: "Helvetica Neue";
   font-size: 28px;
-  width: 75px;
-  height: 50px;
-  margin-left: 25px; }
+  margin-left: 25px;
+  padding: 0.25em 1em;
+  vertical-align: top; }
+
+.contact-me {
+  margin: 1.5em 0;
+  text-align: center; }
