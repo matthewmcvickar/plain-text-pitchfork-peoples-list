@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Plain-text Pitchfork People&rsquo;s List</title>
-  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,22 +24,8 @@
     <p>If it doesn&rsquo;t work, <a href="https://twitter.com/matthewmcvickar">let me know</a>!</p>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
-  <script>
-  $(function() {
-    $('#go').click(function() {
-      $('#list').val(
-          $('#list').val()
-            .replace(/\n?CHOOSE ALBUMS FOR YOUR LIST  EDIT YOUR LIST  VIEW YOUR LIST  WELCOME, [A-Za-z ]*. LOG OUT\?\nEDIT YOUR LIST\nDrag to order the albums you've picked.\nWhen you're done, click "Save Changes".\nDISMISS\nMY TOP ALBUMS\nDrag the albums below to order your list./g, '')
-            .replace(/\nTell us what you think about your top pick:\n\n250 characters remaining\n/g, '')
-            .replace(/\nFinished sorting your list\?\n\nSAVE CHANGES\nUnsaved changes will be\nauto-saved every 30 seconds.\n\nView your list and\nshare it with the world.\n\nVIEW YOUR LIST/g, '')
-            .replace(/\n?Remove/g, '')
-            .replace(/\d+\n(.*)\n(.*)/g, '$2 - $1')
-            .trim()
-        );
-    });
-  });
-  </script>
+  <script>window.jQuery || document.write('<script src="js/lib.js"><\/script>')</script>
+  <script src="js/script.js"></script>
   <script>
   var _gaq=[['_setAccount','UA-2466767-4'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
