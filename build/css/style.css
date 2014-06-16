@@ -61,7 +61,7 @@ body {
   width: 600px; }
 
 a {
-  color: deepskyblue; }
+  color: #0099ff; }
 
 p {
   padding-bottom: 1em; }
@@ -97,7 +97,7 @@ kbd {
   height: 350px; }
 
 #go {
-  background: deepskyblue;
+  background: #0099ff;
   border: 0;
   border-radius: 4px;
   color: white;
